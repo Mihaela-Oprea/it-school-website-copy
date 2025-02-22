@@ -4,7 +4,7 @@
 This is a project developed during the **IT School Web Development course**. It is a simple website that presents the available courses, the team of trainers, and useful information about IT School.
 
 ## 🌍 Demo
-🌐  [Visit the website on Netlify](https://it-school-website-1454.netlify.app/)
+🌐  [Visit the website on Netlify](https://it-school-website-copy-23.netlify.app/)
 
 ---
 
