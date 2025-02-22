@@ -1,0 +1,345 @@
+
+/* welcome section */
+
+.welcome {
+  width: 100vw; 
+  /* Asigură-te că ocupă toată lățimea ferestrei */
+  margin-left: calc(50% - 50vw); 
+  /* Scoate secțiunea din containerul aliniat 
+  50%: Te poziționezi la jumătatea containerului părinte (de exemplu, un container care limitează lățimea).
+  50vw: Te muți înapoi cu jumătate din lățimea ferestrei, astfel încât secțiunea ta să fie centrată pe fereastră și nu pe containerul părinte.*/
+  gap: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 60vh;
+  background-color: var(--bg-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.welcome h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 1;
+  font-weight: 300;
+  line-height: 1.21;
+}
+
+/* main */
+
+main {
+  padding-top: 0px;
+  width: 100%;
+  max-width: min(1240px, 100vw);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* contact section */
+
+.contact {
+  position: relative;
+  padding-bottom: 70px;
+  margin-top: 100px;
+}
+
+.contact-container {
+  position: relative;
+  display: flex;
+  border-radius: 1.6rem;
+  box-shadow: rgba(25, 30, 48, 0.1) 0px 30px 60px 0px;
+  background-color: rgb(253, 253, 253);
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+.left-column {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 4.8rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.33;
+  color: rgba(25, 30, 48, 0.6);
+  margin-bottom: 0.25rem;
+}
+
+.checkbox-container span {
+  color: rgb(25, 30, 48);
+  white-space: nowrap;  
+}
+
+.contact input, textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.contact textarea {
+  font-family: inherit;
+  height: 100px;
+}
+
+.contact input[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.4rem;
+  min-width: 11.4rem;
+  color: white;
+  background-color: rgb(0, 135, 104);
+  transition: 0.25s ease-in;
+}
+
+.contact input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px; 
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+  font-size: 13px; 
+  line-height: 1.33;
+  color: rgba(25, 30, 48, 0.6);
+}
+
+.checkbox-container span {
+  white-space: nowrap;
+}
+
+.terms-link {
+  font-size: 13px;
+  color: rgb(0, 135, 104);
+  text-decoration: none;
+  margin-left: 5px; 
+  white-space: nowrap;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.right-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 4.8rem;
+}
+
+.contact-info {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.right-column a, .symbol-description {
+  font-size: 20px;
+  font-weight: 300px;
+  line-height: 1.22;
+  color: rgb(25, 30, 48);
+  margin: 10px;
+  white-space: nowrap;
+}
+
+.right-column-text-1, .right-column-text-2 {
+  line-height: 2;
+  padding-top: 10px;
+
+}
+
+.right-column-text-2 {
+  padding-top: 25px;
+  color: rgba(25, 30, 48, 0.6);
+}
+
+.right-column h3 {
+  color: rgb(25, 30, 48);
+}
+
+.right-column-symbol {
+  font-size: 35px;
+}
+
+/* adress section */
+
+.adress {
+  position: relative;
+  width: 100%;
+  max-width: 78rem;
+  margin: auto;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 0px 90px;
+  gap: 50px;
+}
+
+.adress-title p {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  color: rgba(25, 30, 48, 0.4);
+} 
+
+.adress-title h2 {
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 1.22;
+  color: rgb(25, 30, 48);
+  margin: 0px;
+}
+
+.adress-all-locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 50%;
+  max-width: 58rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.adress-location {
+  text-align: center;
+}
+
+.adress-symbol1 {
+  color: rgb(31, 116, 155); 
+  font-size: 35px;
+}
+
+.adress-symbol2 {
+  color: rgb(207, 152, 0); 
+  font-size: 35px;
+}
+
+
+@media (max-width:760px) {
+  body, html {
+      width: 100vw;
+      overflow-x: hidden;
+  }
+
+  .welcome h1 {
+   font-size: 30px;
+   padding-top: 30px;
+  }
+
+  .welcome {
+    height: 35vh;
+  }
+
+  .contact {
+      padding: 0px;
+      flex-direction: column;
+      gap: 4.8rem;
+  }
+
+
+  .left-column {
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      display: block;
+      width: 100%;
+  }
+
+  .right-column {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    display: block;
+    width: 100%;
+}
+
+  .contact-container {
+      margin: 0px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: nowrap;
+  }
+
+  .adress img {
+    width: 300px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .adress-all-locations {
+    width: auto;
+    gap: 10px;
+  }
+
+  .adress-title h2 { 
+    font-size: 20px;
+}
+
+  .adress-title p {
+    font-size: 10px;
+    list-style: normal;
+  }
+
+  .adress {
+    gap: 20px;
+  }
+
+  .right-column a, .symbol-description {
+    font-size: 15px;
+    text-wrap: wrap;
+  }
+
+  .right-column-text-1, .right-column-text-2 {
+    line-height: 1.5;
+    padding: 0px;
+    padding-bottom: 20px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .checkbox-container label {
+      display: block;
+  }
+  }

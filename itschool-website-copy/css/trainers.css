@@ -1,0 +1,312 @@
+
+/* welcome section */
+
+.welcome {
+  width: 100vw; 
+  /* Asigură-te că ocupă toată lățimea ferestrei */
+  margin-left: calc(50% - 50vw); 
+  /* Scoate secțiunea din containerul aliniat 
+  50%: Te poziționezi la jumătatea containerului părinte (de exemplu, un container care limitează lățimea).
+  50vw: Te muți înapoi cu jumătate din lățimea ferestrei, astfel încât secțiunea ta să fie centrată pe fereastră și nu pe containerul părinte.*/
+  gap: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 60vh;
+  background-color: var(--bg-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.welcome h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 1;
+  font-weight: 300;
+  line-height: 1.21;
+}
+
+/* main */
+
+main {
+  padding-top: 0px;
+  width: 100%;
+  max-width: min(1240px, 100vw);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* info section */
+
+.info-background {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-image: url(https://www.itschool.ro/_next/static/media/background.fdd8b12d.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  box-sizing: border-box; 
+}
+
+.info-details {
+  max-width: 100%;
+  flex: 1;
+  padding: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box; 
+}
+
+.info-title {
+  font-size: 1rem;
+  color: rgba(25, 30, 48, 0.4);
+  margin: 1rem 0;
+}
+
+.info-details h2 {
+  font-family: 'Asap', sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 1.22;
+  color: rgb(25, 30, 48);
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+.info-description {
+  font-family: 'Asap', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: rgb(25, 30, 48);
+  padding-bottom: 10px;
+}
+
+.join-button {
+  cursor: pointer;
+  width: fit-content;
+  padding: 8px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.4rem;
+  min-width: 11.4rem;
+  color: white;
+  background-color: rgb(0, 135, 104);
+  transition: 0.25s ease-in;
+}
+
+.join-button:hover {
+  opacity: 0.8;
+}
+
+/* header deasupra sectiunii trainers-list */
+
+.trainers-header {
+  font-family: 'Asap', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  padding-left: 100px;
+  padding-top: 50px;
+  color: rgba(25, 30, 48, 0.4);
+}
+
+/* section trainers-list*/
+
+.trainers-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px; 
+  justify-items: center;
+}
+
+.trainer-profile {
+  max-width: 100%;
+  height: 500px;
+  word-wrap: break-word;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 1.6rem;
+  box-shadow: rgba(25, 30, 48, 0.1) 0px 3rem 6rem 0px;
+  background-color: rgb(253, 253, 253);
+}
+
+.trainer-photo {
+  width: 70px; 
+  height: 70px; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px; 
+  filter: grayscale(100%);
+}
+
+.trainer-info {
+  flex: 1;
+}
+
+.trainer-info h5 {
+  font-family: 'Asap', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.22;
+  color: rgb(25, 30, 48);
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.trainer-job {
+  font-family: 'Asap', sans-serif;
+  margin-top: 5px;
+  font-size: 16px;
+  color: rgba(25, 30, 48, 0.6);
+}
+
+.trainer-bio {
+  font-family: 'Asap', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--bg-dark);
+}
+
+@media (max-width:1024px) {
+  .info-background {
+    display: block;
+  }
+
+  .trainer-photo {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+}
+
+@media (max-width:991px) {
+  .trainers-list { 
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 50px;
+  }
+
+  .trainer-profile {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .trainers-header {
+    padding-left: 0px;
+  }
+
+  .trainer-info h5 {
+    margin-top: 15px;
+  }
+
+  .trainer-photo {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:760px) {
+  body, html {
+      width: 100vw;
+      overflow-x: hidden;
+  }
+
+  .welcome h1 {
+   font-size: 30px;
+   padding-top: 30px;
+  }
+
+  .welcome {
+    height: 35vh;
+  }
+
+  .info {
+      padding: 2rem 0px;
+      flex-direction: column;
+      gap: 4.8rem;
+  }
+
+  .info-details {
+      margin: 0px;
+      padding: 0px;
+      padding-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      display: block;
+  }
+
+  .info-details h2 {
+    font-size: 1.75rem;
+  }
+
+  .info-background {
+      margin: 0px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      display: block;
+  }
+
+  .trainer-photo {
+    margin-right: 0px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .trainers-header {
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-top: 40px;
+  }
+
+  .trainers-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .trainer-profile {
+    gap: 1rem;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 17px;
+  }
+
+  .details-section h2 {
+    font-size: 25px;
+  }
+
+  .section-description {
+    padding-bottom: 0;
+  }
+
+  main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+}
